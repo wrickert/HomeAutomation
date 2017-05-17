@@ -1,0 +1,16 @@
+import requests
+import json
+
+resp = requests.get('http://webservices.nextbus.com/service/publicJSONFeed?command=predictions&a=cyride&r=3S&s=1045')
+
+data = resp.json()
+
+#print(list(data['predictions']['direction']['prediction']['minutes'] ))
+#print(data)
+#print(data['predictions']['prediction'] )
+
+#This works if there is only one prediction
+#print(data['predictions']['direction']['prediction']['minutes'])
+
+print(data['predictions']['direction']['prediction'][0]['minutes'])
+print(data['predictions']['direction']['prediction'][1]['minutes'])

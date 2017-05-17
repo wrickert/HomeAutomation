@@ -1,3 +1,7 @@
+#William Rickert
+#Next Bus parser - check the nextbus service and finds when the next two are
+#info from - https://gist.github.com/grantland/7cf4097dd9cdf0dfed14
+
 import requests
 import json
 
@@ -5,9 +9,6 @@ resp = requests.get('http://webservices.nextbus.com/service/publicJSONFeed?comma
 
 data = resp.json()
 
-#print(list(data['predictions']['direction']['prediction']['minutes'] ))
-#print(data)
-#print(data['predictions']['prediction'] )
 
 #This works if there is only one prediction
 #print(data['predictions']['direction']['prediction']['minutes'])
